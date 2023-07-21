@@ -1,0 +1,33 @@
+@mixin funcionGrid($numeroColumnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($numeroColumnas, 1fr);
+    gap: $espaciado;
+}
+
+@mixin formatoTexto($size, $weight, $color, $v1, $v2) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    margin: $v1 $v2;
+}
+
+@mixin formatoCuadros($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 5px;
+    border: 0.3px solid $colorBorde;
+    background: $colorFondoCuadros;
+}
+
+@mixin formatoImagenes($grid-column, $grid-row, $justify-self) {
+    border-radius: 50%;
+    grid-column: $grid-column;
+    grid-row: $grid-row;
+    justify-self: $justify-self;
+}
+
+@mixin formatoSeccion($grid-column, $grid-row, $justify-self) {
+    grid-column: $grid-column;
+    grid-row: $grid-row;
+    justify-self: $justify-self;
+}
